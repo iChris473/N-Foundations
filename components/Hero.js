@@ -2,7 +2,7 @@ import {ArrowLeftIcon, ArrowRightIcon, UserGroupIcon} from "@heroicons/react/out
 import Image from "next/image"
 import { useState } from "react"
 import Topbar from "./Topbar";
-import {PF} from '../url'
+import {VURL} from '../vercelurl'
 
 export default function Hero() {
 
@@ -28,7 +28,7 @@ export default function Hero() {
             <ArrowLeftIcon onClick={handleLeftSlide} className="cursor-pointer h-6 md:h-8 text-gray-500 absolute left-0 top-[50%] z-20 bg-white md:ml-2 rounded-lg" />
             <ArrowRightIcon onClick={handleRightSlide}  className="h-6 md:h-8 text-gray-500 absolute right-0 top-[50%] z-20 bg-white ml-2 rounded-lg cursor-pointer md:mr-2" />
           <div className="h-screen w-screen relative ">
-              <Image alt="hero" src={PF + imgName} className="opacity-80" layout="fill" objectFit="cover" />
+              <Image alt="hero" src={VURL + imgName} className="opacity-80" layout="fill" objectFit="cover" />
           </div>
       </div>
       <div className="absolute top-[40%] shadow-sm z-10 border bg-white bg-opacity-60 rounded-md p-2 m-2 md:left-[20%] w-[95%] md:w-1/2">

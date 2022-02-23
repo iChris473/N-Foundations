@@ -5,7 +5,8 @@ import {  useRef, useState } from "react";
 import Footer from "../components/Footer";
 import Topbar from "../components/Topbar";
 import Link from "next/link";
-
+import {VURL} from '../vercelurl'
+import {PF} from '../url'
 
 
 export default function Resetpassword() {
@@ -31,7 +32,7 @@ export default function Resetpassword() {
         }
 
         try {
-          await axios.put(`http://localhost:2004/user/resetpassword?resettoken=${query.resettoken}`, newUser)
+          await axios.put(PF+`api/user/resetpassword?resettoken=${query.resettoken}`, newUser)
           setPasswordError(false)
           setSuccess(true)
           newPassword.current.value = ''
@@ -44,11 +45,10 @@ export default function Resetpassword() {
         }
     }
 
-    const PF = "http://localhost:3000/"
   return (
     <div className="relative overflow-x-hidden min-h-screen ">
         <div className="h-[100%] -z-10 w-screen absolute ">
-            <Image alt='bg' src={PF + "registerbg.jpg"} className="opacity-30" layout="fill" objectFit="cover" />
+            <Image alt='bg' src={VURL + "registerbg.jpg"} className="opacity-30" layout="fill" objectFit="cover" />
         </div>
         <Topbar />
           <div className="my-40 w-[96%] max-w-[600px] mx-auto shadow-sm z-50 bg-opacity-80 border bg-white rounded-md p-2 md:px-5">

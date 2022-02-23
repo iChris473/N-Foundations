@@ -6,6 +6,7 @@ import { AuthContext } from "../components/context/AuthContext";
 import Footer from "../components/Footer";
 import Topbar from "../components/Topbar";
 import {PF} from '../url'
+import {VURL} from '../vercelurl'
 
 
 export default function Editprofile() {
@@ -74,7 +75,7 @@ export default function Editprofile() {
   return (
     <div className="relative overflow-x-hidden min-h-screen ">
         <div className="h-[100%] -z-10 w-screen absolute ">
-            <Image alt='bg' src={PF + "registerbg.jpg"} className="opacity-30" layout="fill" objectFit="cover" />
+            <Image alt='bg' src={VURL + "registerbg.jpg"} className="opacity-30" layout="fill" objectFit="cover" />
         </div>
 
         <Topbar />

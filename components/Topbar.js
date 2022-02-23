@@ -5,7 +5,7 @@ import { useContext, useState } from "react";
 import { AuthContext } from "../components/context/AuthContext";
 import { useRouter } from "next/router";
 import Dropdown from "./Dropdown";
-import {PF} from '../url'
+import {VURL} from '../vercelurl'
 
 export default function Topbar() {
 
@@ -27,7 +27,7 @@ export default function Topbar() {
                   <div className="flex pr-[20%] items-center justify-center gap-2 bg-green-500s">
                       <Link href="/">
                           <a>
-                              <Image alt="logo" src={PF + "foundation.png"} height="50px" width="70px" />
+                              <Image alt="logo" src={VURL + "foundation.png"} height="50px" width="70px" />
                           </a>
                       </Link>
                       <Link href="/">

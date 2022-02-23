@@ -1,0 +1,1 @@
+exports.VURL = 'https://ndfoundations.vercel.app/'
