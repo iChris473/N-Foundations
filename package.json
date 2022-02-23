@@ -2,7 +2,7 @@
   "name": "ndfoundation",
   "private": true,
   "scripts": {
-    "dev": "nodemon server/index.js",
+    "dev": "node server/index.js",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
