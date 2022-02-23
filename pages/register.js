@@ -29,7 +29,7 @@ export default function Register() {
   // check passwords state
   const [passwordError, setPasswordError] = useState(false)
   const [submitting, setSubmitiing] = useState(false)
-  const [emailError, seEmailError] = useState(false)
+  const [emailError, setEmailError] = useState(false)
 
   // sign up logic function
   const signUphandler = async e => {
@@ -39,7 +39,7 @@ export default function Register() {
     const timeOut = () => {
       setTimeout(() => {
         setPasswordError(false)
-        seEmailError(false)
+        setEmailError(false)
       }, 3000)
     }
 
@@ -68,7 +68,7 @@ export default function Register() {
         console.log(err)
         setSubmitiing(false)
         setPasswordError(false)
-        seEmailError(true)
+        setEmailError(true)
         timeOut()
       }
     } else {
