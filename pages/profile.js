@@ -26,7 +26,7 @@ export default function Profile() {
 
         <Topbar />
           <div className="my-40 w-[96%] max-w-[600px] mx-auto shadow-sm z-50 bg-opacity-80 border bg-white rounded-md p-2 md:px-5">
-            <h1 className="font-semibold text-xl text-center my-5 text-gray-600">{user?.firstName}</h1>
+            <h1 className="font-semibold text-xl text-center my-5 text-gray-600">Hi {user?.firstName}</h1>
             <div className=" flex flex-col items-center justify-center gap-2 pb-10">
                 <div className="border border-gray-300 rounded-md w-full mx-auto flex justify-between p-1 !px-3 text-gray-600"> <span className="text-sm">First Name:</span> <p>{user?.firstName}</p> </div>
                 <div className="border border-gray-300 rounded-md w-full mx-auto flex justify-between p-1 !px-3 text-gray-600"><span className="text-sm">Last Name:</span> <p>{user?.lastName}</p> </div>
