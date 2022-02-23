@@ -93,7 +93,7 @@ export default function Editprofile() {
                 <input ref={placeOfBirth} type="text" placeholder={user?.placeOfBirth} className="focus:ring-0 focus:outline-none bg-transparent border border-gray-300 rounded-md w-full mx-auto block p-1 text-gray-600" />
                 <input ref={institution} type="text" placeholder={user?.institution} className="focus:ring-0 focus:outline-none bg-transparent border border-gray-300 rounded-md w-full mx-auto block p-1 text-gray-600" />
                 <select ref={grade} name="grades" id="" className="focus:ring-0 focus:outline-none bg-transparent border border-gray-300 rounded-md w-full mx-auto block p-1 text-gray-600">
-                    <option value={user.grade}>{user.grade}</option>
+                    <option value={user?.grade}>{user?.grade}</option>
                     <option value="First Class">First Class</option>
                     <option value="Second Class Upper">Second Class Upper</option>
                     <option value="Second Class Lower">Second Class Lower</option>
