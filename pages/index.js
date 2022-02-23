@@ -11,7 +11,7 @@ export default function Home() {
       <Hero />
       <div className="relative">
         <div className="h-[100%] -z-10 w-screen absolute -top-10">
-          <Image src={PF + "registerbg.jpg"} className="opacity-10" layout="fill" objectFit="cover" />
+          <Image alt='bg' src={PF + "registerbg.jpg"} className="opacity-10" layout="fill" objectFit="cover" />
         </div>
         <About />
         <Footer />

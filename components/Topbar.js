@@ -27,7 +27,7 @@ export default function Topbar() {
                   <div className="flex pr-[20%] items-center justify-center gap-2 bg-green-500s">
                       <Link href="/">
                           <a>
-                              <Image src={PF + "foundation.png"} height="50px" width="70px" />
+                              <Image alt="logo" src={PF + "foundation.png"} height="50px" width="70px" />
                           </a>
                       </Link>
                       <Link href="/">

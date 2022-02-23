@@ -39,7 +39,6 @@ export default function Signin() {
     }
 
     try {
-      console.log(newUser)
       const res = await axios.post(PF+'api/user/siginin', newUser)
       setSubmitiing(false)
       dispatch({type: "LOGIN_SUCCESS", payload:res.data})
@@ -57,7 +56,7 @@ export default function Signin() {
   return (
     <div className="relative overflow-x-hidden min-h-screen ">
         <div className="h-[100%] -z-10 w-screen absolute ">
-            <Image src={PF + "registerbg.jpg"} className="opacity-30" layout="fill" objectFit="cover" />
+            <Image alt='bg' src={PF + "registerbg.jpg"} className="opacity-30" layout="fill" objectFit="cover" />
         </div>
 
         <Topbar />

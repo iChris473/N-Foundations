@@ -18,7 +18,7 @@ export default function Editprofile() {
     // navigates back to home page if theres no user
     useEffect(() => {
      !user && router.push('/')
-    }, [])
+    }, [user, router])
 
   //  Get All infos with use ref hook
   const firstName = useRef()
@@ -74,7 +74,7 @@ export default function Editprofile() {
   return (
     <div className="relative overflow-x-hidden min-h-screen ">
         <div className="h-[100%] -z-10 w-screen absolute ">
-            <Image src={PF + "registerbg.jpg"} className="opacity-30" layout="fill" objectFit="cover" />
+            <Image alt='bg' src={PF + "registerbg.jpg"} className="opacity-30" layout="fill" objectFit="cover" />
         </div>
 
         <Topbar />

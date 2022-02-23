@@ -48,7 +48,7 @@ export default function Resetpassword() {
   return (
     <div className="relative overflow-x-hidden min-h-screen ">
         <div className="h-[100%] -z-10 w-screen absolute ">
-            <Image src={PF + "registerbg.jpg"} className="opacity-30" layout="fill" objectFit="cover" />
+            <Image alt='bg' src={PF + "registerbg.jpg"} className="opacity-30" layout="fill" objectFit="cover" />
         </div>
         <Topbar />
           <div className="my-40 w-[96%] max-w-[600px] mx-auto shadow-sm z-50 bg-opacity-80 border bg-white rounded-md p-2 md:px-5">
@@ -65,7 +65,7 @@ export default function Resetpassword() {
                 { success ?
                     (
                     <Link href="/signin">
-                        <button  className="p-2 w-full font-semibold border border-gray-500 rounded-md bg-white text-black">Login</button>
+                        <a><button  className="p-2 w-full font-semibold border border-gray-500 rounded-md bg-white text-black">Login</button></a>
                     </Link>
                     ) :
                  (<button type="submit" className="p-2 w-full bg-green-500 text-white font-semibold hover:border border-gray-500 rounded-md">Update</button>)}

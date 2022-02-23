@@ -14,7 +14,7 @@ export default function Editpassword() {
     // navigates back to home page if theres no user
     useEffect(() => {
      !user && router.push('/')
-    }, [])
+    }, [user, router])
 
     const oldPassword = useRef()
     const newPassword = useRef()
@@ -71,7 +71,7 @@ export default function Editpassword() {
   return (
     <div className="relative overflow-x-hidden min-h-screen ">
         <div className="h-[100%] -z-10 w-screen absolute ">
-            <Image src={PF + "registerbg.jpg"} className="opacity-30" layout="fill" objectFit="cover" />
+            <Image alt='bg' src={PF + "registerbg.jpg"} className="opacity-30" layout="fill" objectFit="cover" />
         </div>
         <Topbar />
           <div className="my-40 w-[96%] max-w-[600px] mx-auto shadow-sm z-50 bg-opacity-80 border bg-white rounded-md p-2 md:px-5">
