@@ -1,2 +1,2 @@
 
-exports.PF = 'https://ndfoundation.vercel.app/'
+exports.PF = 'https://ndfoundation.herokuapp.com//'
