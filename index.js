@@ -75,6 +75,11 @@ app.get('/resetpassword', function(req, res) {
     path.join(__dirname, './client/build/resetpassword.html'), (err => err && res.status(500).send(err))
   )
 })
+app.get('&', function(req, res) {
+  res.sendFile(
+    path.join(__dirname, './client/build/404.html'), (err => err && res.status(500).send(err))
+  )
+})
 
 
 
