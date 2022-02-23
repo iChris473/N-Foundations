@@ -66,6 +66,7 @@ export default function Register() {
         router.push('/')
       } catch (err) {
         console.log(err)
+        console.log('an arror occured')
         setSubmitiing(false)
         setPasswordError(false)
         setEmailError(true)
