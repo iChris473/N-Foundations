@@ -31,7 +31,7 @@ app.prepare().then(() => {
       return handle(req, res)
     })
   
-    server.listen(port, (err) => {
+    server.listen('https://ndfoundations.vercel.app/', (err) => {
       if (err) throw err
       console.log(`> Ready on ${port}`)
     })
