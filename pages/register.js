@@ -29,6 +29,7 @@ export default function Register() {
   // check passwords state
   const [passwordError, setPasswordError] = useState(false)
   const [submitting, setSubmitiing] = useState(false)
+  const [emailError, seEmailError] = useState(false)
 
   // sign up logic function
   const signUphandler = async e => {
@@ -38,6 +39,7 @@ export default function Register() {
     const timeOut = () => {
       setTimeout(() => {
         setPasswordError(false)
+        seEmailError(false)
       }, 3000)
     }
 
@@ -65,6 +67,9 @@ export default function Register() {
       } catch (err) {
         console.log(err)
         setSubmitiing(false)
+        setPasswordError(false)
+        seEmailError(true)
+        timeOut()
       }
     } else {
       setSubmitiing(false)
@@ -82,8 +87,9 @@ export default function Register() {
         <Topbar />
           <div className="my-40 w-[96%] max-w-[600px] mx-auto shadow-sm z-50 bg-opacity-80 border bg-white rounded-md p-2 md:px-5">
           <h1 className="font-semibold text-xl text-center my-5 text-gray-600">Register for a grant</h1>
-          {/* password error message */}
+          {/* password and error message */}
           {passwordError && <p className="bg-red-400 my-2 text-white font-semibold p-2 w-full rounded-sm text-center">passwords doesn't match</p>}
+          {emailError && <p className="bg-red-400 my-2 text-white text-xs md:text-md font-semibold p-2 w-full rounded-sm text-center">An account is already registered with this email</p>}
             <form onSubmit={signUphandler} className=" flex flex-col items-center justify-center gap-2 pb-10">
                 <input ref={firstName} required type="text" placeholder="First Name" className="focus:ring-0 focus:outline-none bg-transparent border border-gray-300 rounded-md w-full mx-auto block p-1 text-gray-600" />
                 <input ref={lastName} required type="text" placeholder="Last Name" className="focus:ring-0 focus:outline-none bg-transparent border border-gray-300 rounded-md w-full  mx-auto block p-1 text-gray-600" />
