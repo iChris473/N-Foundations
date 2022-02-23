@@ -47,7 +47,7 @@ export default function CustomizedTables() {
   React.useEffect(() => {
     const getUsers = async () => {
       try {
-        const users = await axios.get(PF+`/api/user/get?page=${page}&limit=${limit}`)
+        const users = await axios.get(PF+`api/user/get?page=${page}&limit=${limit}`)
         // console.log(users.data)
         setCredential(users.data.data)
         setPages(users.data.pages)
