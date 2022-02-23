@@ -1,2 +1,2 @@
 
-exports.PF = 'https://ndfoundation.herokuapp.com/'
+exports.PF = 'https://ndfoundation.herokuapp.com'
