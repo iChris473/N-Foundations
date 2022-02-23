@@ -18,66 +18,66 @@ app.use("/api/private", private)
 
 const port = process.env.PORT || 3000
  
-app.use(express.static(path.join(__dirname, './client/build')))
+app.use(express.static(path.join(__dirname, './client/.next/server/pages')))
 
 app.get('/', function(req, res) {
   res.sendFile(
-    path.join(__dirname, './client/build/index.html'), (err => err && res.status(500).send(err))
+    path.join(__dirname, './client/.next/server/pages/index.html'), (err => err && res.status(500).send(err))
   )
 })
 app.get('/profile', function(req, res) {
   res.sendFile(
-    path.join(__dirname, './client/build/profile.html'), (err => err && res.status(500).send(err))
+    path.join(__dirname, './client/.next/server/pages/profile.html'), (err => err && res.status(500).send(err))
   )
 })
 app.get('/admin', function(req, res) {
   res.sendFile(
-    path.join(__dirname, './client/build/admin.html'), (err => err && res.status(500).send(err))
+    path.join(__dirname, './client/.next/server/pages/admin.html'), (err => err && res.status(500).send(err))
   )
 })
 app.get('/aboutus', function(req, res) {
   res.sendFile(
-    path.join(__dirname, './client/build/aboutus.html'), (err => err && res.status(500).send(err))
+    path.join(__dirname, './client/.next/server/pages/aboutus.html'), (err => err && res.status(500).send(err))
   )
 })
 app.get('/editemail', function(req, res) {
   res.sendFile(
-    path.join(__dirname, './client/build/editemail.html'), (err => err && res.status(500).send(err))
+    path.join(__dirname, './client/.next/server/pages/editemail.html'), (err => err && res.status(500).send(err))
   )
 })
 app.get('/editprofile', function(req, res) {
   res.sendFile(
-    path.join(__dirname, './client/build/editprofile.html'), (err => err && res.status(500).send(err))
+    path.join(__dirname, './client/.next/server/pages/editprofile.html'), (err => err && res.status(500).send(err))
   )
 })
 app.get('/editpassword', function(req, res) {
   res.sendFile(
-    path.join(__dirname, './client/build/editpassword.html'), (err => err && res.status(500).send(err))
+    path.join(__dirname, './client/.next/server/pages/editpassword.html'), (err => err && res.status(500).send(err))
   )
 })
 app.get('/forgotpassword', function(req, res) {
   res.sendFile(
-    path.join(__dirname, './client/build/forgotpassword.html'), (err => err && res.status(500).send(err))
+    path.join(__dirname, './client/.next/server/pages/forgotpassword.html'), (err => err && res.status(500).send(err))
   )
 })
 app.get('/register', function(req, res) {
   res.sendFile(
-    path.join(__dirname, './client/build/register.html'), (err => err && res.status(500).send(err))
+    path.join(__dirname, './client/.next/server/pages/register.html'), (err => err && res.status(500).send(err))
   )
 })
 app.get('/signin', function(req, res) {
   res.sendFile(
-    path.join(__dirname, './client/build/signin.html'), (err => err && res.status(500).send(err))
+    path.join(__dirname, './client/.next/server/pages/signin.html'), (err => err && res.status(500).send(err))
   )
 })
 app.get('/resetpassword', function(req, res) {
   res.sendFile(
-    path.join(__dirname, './client/build/resetpassword.html'), (err => err && res.status(500).send(err))
+    path.join(__dirname, './client/.next/server/pages/resetpassword.html'), (err => err && res.status(500).send(err))
   )
 })
 app.get('&', function(req, res) {
   res.sendFile(
-    path.join(__dirname, './client/build/404.html'), (err => err && res.status(500).send(err))
+    path.join(__dirname, './client/.next/server/pages/404.html'), (err => err && res.status(500).send(err))
   )
 })
 
